@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DB</title>
+
+    <script src="script.js"></script>
+
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <header class="header">
+        <a href="#" class="logo">БД</a>
+        
+        <!-- Hamburger icon -->
+        <input class="side-menu" type="checkbox" id="side-menu"/>
+        <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+        
+        <!-- Menu -->
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="postgres.html">PostgreSQL</a></li>
+                <li><a href="oracle.html">OracleDB</a></li>
+                <li><a href="mysql.html">MySQL</a></li>
+                <li><a href="sqlite.html">SQLite</a></li>
+                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="about.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Main content -->
+    <main>
+
+        <div class="centerdiv">
+
+
+    
+            <div class="container" id="tostart">
+                    База данных (БД) — это набор информации, 
+                    который хранится упорядоченно 
+                    в электронном виде.
+                
+            </div>
+
+
+            <div class="textborder">
+                <p>БД бывают <span style="color: #aa2ebb;">реляционными</span> и нереляционными.
+                    
+                <p class="smallp">Остановимся на первых. 
+                    Ещё их называют табличными — из-за того, 
+                    что все данные они хранят в виде таблиц. 
+                    Эти таблицы внутри связаны друг с другом, 
+                    поэтому получается связная структура.
+                </p>    
+                
+                </p>
+            </div>
+        
+            <br><br>
+            
+
+            <div class="wrapper">
+
+
+            <div>
+            <p>PostgreSQL</p>
+        
+            <a href="postgres.html"><img class="dbimg" src="postgres.jpg" alt="PostgreSQL" width="450px" height="450px" style="display: block; margin: 0 auto;"></a>
+            <br>
+        
+            <div class="textborder">
+                <p>PostgreSQL — это СУБД c открытым исходным кодом.
+                    <p class="smallp">Популярностью у разработчиков и администраторов база данных PostgreSQL обязана своей исключительной 
+                    гибкости и целостности. Например, база данных PostgreSQL поддерживает
+                    как реляционные, так и нереляционные запросы.
+                    </p>
+                    <!-- Сильными сторонами PostgreSQL считаются:
+                    <ul type="i">
+                        <li>высокопроизводительные и надёжные механизмы транзакций и репликации;</li>
+                        <li>расширяемая система встроенных языков программирования</li>
+                        <li>наследование;</li>
+                        <li>возможность индексирования геометрических (в частности, географических) объектов</li>
+                        <li>встроенная поддержка слабоструктурированных данных в формате JSON с возможностью их индексации;</li>
+                        <li>расширяемость (возможность создавать новые типы данных, типы индексов, языки программирования, модули расширения, подключать любые внешние источники данных).</li>
+                    </ul> -->
+                    
+                </p>
+            </div>
+        
+        </div>
+
+        <div>
+            <p>Oracle</p>
+        
+            <a href="oracle.html"><img class="dbimg" src="oracle.png" alt="OracleDB" width="450px" height="450px" style="display: block; margin: 0 auto;"></a>
+            <br>
+            
+            <div class="textborder">
+                <p>Oracle Database - это СУБД, 
+                    разработанная корпорацией Oracle. 
+                    
+                    <p class="smallp">База данных Oracle предлагает расширенные функции, 
+                        такие как высокая доступность, масштабируемость, безопасность 
+                        и настройка производительности.
+                    </p>
+                    
+                </p>
+            </div>
+
+        </div>
+
+
+        <div>
+            
+            <p>MySQL</p>
+        
+            <a href="mysql.html"><img class="dbimg" src="mysql2.png" alt="MySQL" width="450px" height="450px" style="display: block; margin: 0 auto;"></a>
+            <br>
+        
+            <div class="textborder">
+                <p>MySQL — свободная реляционная система управления базами данных. 
+                    
+                    <p class="smallp">Разработку и поддержку MySQL осуществляет корпорация Oracle.
+                        MySQL является решением для малых и средних приложений.
+                        Гибкость СУБД MySQL обеспечивается поддержкой большого количества типов таблиц: <a href="mysql.html">Читать далее. . .</a> 
+                        <!-- пользователи могут выбрать как таблицы типа MyISAM, поддерживающие полнотекстовый поиск, 
+                        так и таблицы InnoDB, поддерживающие транзакции на уровне отдельных записей.  -->
+                    </p>
+                    
+                </p>
+            </div>
+        
+        </div>
+
+        <div>
+            <p>SQLite</p>
+        
+            <a href="sqlite.html"><img class="dbimg" src="sqlite.png" alt="SQLite" width="450px" height="450px" style="display: block; margin: 0 auto;"></a>
+        
+            <div class="textborder">
+                <p>SQLite — компактная встраиваемая СУБД.
+                    <p class="smallp">Исходный код библиотеки передан в общественное достояние. 
+                        В 2005 году проект получил награду Google-O'Reilly Open Source Awards.
+                        SQLite поддерживает динамическое типизирование данных.
+                        Сама библиотека SQLite написана на C, 
+                        но существует большое количество привязок к другим языкам программирования.
+                    </p>
+                </p>
+            </div>
+        </div>
+
+        </div>
+            
+        
+            
+        </div>
+    </main>
+    <p class="smallp">
+        <a href="#tostart">На начало страницы</a>
+    </p>
+    <footer class="footer">
+       
+        
+        <div class="foot">
+
+
+            <div class="first">
+                About us
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, cupiditate debitis similique odit optio praesentium temporibus fugiat modi, dolores ad, magni quae maxime natus repellat aliquid odio. In animi, est sequi impedit aliquid, dolores, ducimus necessitatibus inventore et dolor omnis?
+            </div>
+
+            <div class="second">
+                Links
+                fsdjf sdfsdf
+                fdsfsd
+            </div>
+
+            <div class="third">
+                Shop
+                fsdfsdfsdfsdfsdfsdfsd
+            
+            </div>
+
+            <div class="forth">
+                Contact us
+                fsdfsdfsdfsdfsdfsdfsd
+            
+            </div>
+
+        </div>
+
+        
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,351 @@
+/* TODO: меню у мобил. в горизонте */
+
+
+@font-face {
+    font-family: zekton;
+    src: url("zekton.ttf");
+}
+
+
+:root {
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+}
+
+
+body {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    /* background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
+    background-color: var(--white);
+    font-family: "zekton";
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    /* column-gap: 0.1em; */
+    row-gap: 2em;
+}
+
+#like_button {
+    border: none;
+    background-color: gray;
+    color: white;
+    font-size: 20px;
+    font-family: zekton, serif;
+    border-radius: 5px;
+    padding: 0.3em;
+}
+
+
+
+.footer {
+    background-color: #474950;
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    width: 100%;
+    z-index: 10000;
+    padding: 20px;
+    color: #fff;
+    width: 100%;
+
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1em;
+
+}
+
+.foot > div {
+    padding: 1em;
+}
+
+@media (max-width: 1000px) {
+    .foot {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .foot {
+        grid-template-columns: 100%;
+    }
+}
+
+
+p, a {
+    font-size: 1rem;
+}
+
+.image {
+    position: relative;
+}
+
+
+.image img {
+    max-width: 100%;
+    display: block;
+}
+
+.imgcontent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(15, 15, 15, 0.7);
+    color: #fff;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+
+* {
+    padding: 0px;
+    margin: 0px;
+    scroll-behavior: smooth;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    background-color: var(--black);
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    padding: 10px;
+    box-shadow: 0px 1px 2px rgba(157, 24, 197, 0.5),
+    0px 2px 3px rgba(157, 24, 197, 0.5),
+    0px 3px 5px rgba(157, 24, 197, 0.5),
+    0px 5px 7px rgba(157, 24, 197, 0.5);
+}
+
+.logo {
+    display: inline-block;
+    color: white;
+    font-size: 60px;
+    margin-left: 10px;
+}
+
+
+.nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+    left: 0;
+    flex-flow: row nowrap;
+
+}
+
+.menu a {
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+
+.menu a:hover {
+    background-color: var(--gray);
+}
+
+.menu a.active {
+    /* background-color: var(--gray); Цвет фона для активной ссылки */
+    color: rgba(166, 65, 197, 0.938); /* Цвет текста для активной ссылки */
+    font-weight: bold; /* Установите жирный шрифт для активной ссылки */
+}
+
+.nav {
+    max-height: 0; /* ограничивает высоту до нуля, чтобы скрыть меню */
+    transition: max-height .4s ease-out; /* анимация открытия меню */
+}
+
+.hamb { /* устанавливает положение кнопки, добавляет отступы и курсор-указатель */
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}
+
+.hamb-line { /* стилизует белые полосы */
+    background: white;
+    display: block;
+    height: 2.5px;
+    position: relative;
+    width: 24px;
+
+}
+
+.hamb-line::before,
+.hamb-line::after {
+    background: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out; /* анимацию с плавным переходом всем свойствам при изменении */
+    width: 100%;
+}
+
+.hamb-line::before { /* расставляет полосы */
+    top: 5px;
+}
+
+.hamb-line::after {
+    top: -5px;
+}
+
+.side-menu { /* скрывает чекбокс, который используется для управления видимостью меню.*/
+    display: none;
+}
+
+
+.side-menu:checked ~ nav {
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent; /* прозрачный */
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before { /* при активации меню вращают верхнюю и нижнюю полосы для создания крестика */
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+
+@media screen and (min-width: 1136px) {
+    /* 768px */
+    .image-gallery {
+        flex-direction: row;
+    }
+
+    .nav {
+        max-height: none;
+        top: 0;
+        position: relative;
+        float: right;
+        width: fit-content; /* yстанавливает ширину элемента, чтобы она соответствовала его содержимому */
+    }
+
+    .menu li {
+        float: left; /* выравнивание элементов меню */
+    }
+
+    .menu a:hover {
+        background-color: transparent;
+        color: var(--gray);
+
+    }
+
+    .hamb {
+        display: none;
+    }
+
+    .container {
+        max-width: 100%; /* Ограничиваем ширину контейнера на мобильных устройствах */
+        margin-left: 10px; /* Добавляем отступ слева, чтобы не заходить на иконку бургера */
+        margin-right: 10px; /* Добавляем отступ справа, чтобы не заходить за границы экрана */
+        overflow-wrap: break-word;
+    }
+
+    .wrapper {
+        /* grid-template-columns: 100%; */
+    }
+}
+
+@media (max-width: 998px) {
+    .wrapper {
+        grid-template-columns: 100%;
+    }
+
+}
+
+.container {
+    text-align: center;
+    font-family: zekton;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 3%;
+    font-size: 2em;
+
+}
+
+.container pre {
+    display: inline-block;
+    text-align: center;
+    font-size: 50px;
+}
+
+.dbimg {
+    width: 20em;
+    height: 20em;
+    text-align: center;
+}
+
+p {
+    font-size: 50px;
+    text-align: center;
+}
+
+.smallp {
+    font-size: 30px;
+}
+
+.centerdiv {
+    text-align: center;
+}
+
+
+.textborder {
+    overflow-wrap: break-word;
+    --b: .2em; /* border width */
+    --c: 2em; /* corner size */
+    --r: .5em; /* corner rounding */
+    position: relative;
+    margin: 1em auto;
+    border: solid var(--b) transparent;
+    padding: 0.5em;
+    max-width: 23em;
+    font: 2.5em zekton;
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        inset: calc(-1 * var(--b));
+        border: inherit;
+        border-radius: var(--r);
+        background: linear-gradient(#252b31, rgb(140, 23, 163), #68205c) border-box;
+        --corner: conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0) 0 0/ calc(100% - var(--c)) calc(100% - var(--c)) border-box;
+        --inner: conic-gradient(red 0 0) padding-box;
+        -webkit-mask: var(--corner), var(--inner);
+        -webkit-mask-composite: source-out;
+        mask: var(--corner) subtract, var(--inner);
+        content: ''
+    }
+}
