@@ -1,11 +1,16 @@
 /* TODO: меню у мобил. в горизонте */
 
 
-@font-face {
-    font-family: zekton;
-    src: url("zekton.ttf");
-}
+/*@font-face {*/
+/*    font-family: zekton;*/
+/*    src: url("zekton.ttf");*/
+/*}*/
 
+
+@font-face {
+    font-family: Cakra-Normal;
+    src: url("Cakra-Normal.otf");
+}
 
 :root {
     --white: #f9f9f9;
@@ -15,68 +20,124 @@
 
 
 body {
+    color: black;
     width: 100%;
     height: 100%;
-    background: #fff;
-    /* background: rgb(238,174,202);
-    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
-    background-color: var(--white);
-    font-family: "zekton";
+    /*background-color: var(--white);*/
+    background-color: rgba(225, 223, 223, 0.87);
+    /*background: rgb(2,2,28);*/
+    /*background: linear-gradient(90deg, rgba(2,2,28,1) 4%, rgba(14,14,73,1) 51%, rgba(2,2,28,1) 85%);*/
+    font-family: "Cakra-Normal";
 }
 
 .wrapper {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: repeat(2, 1fr);
     /* column-gap: 0.1em; */
     row-gap: 2em;
 }
 
-#like_button {
-    border: none;
-    background-color: gray;
-    color: white;
-    font-size: 20px;
-    font-family: zekton, serif;
-    border-radius: 5px;
-    padding: 0.3em;
-}
-
-
-
-.footer {
-    background-color: #474950;
-    box-shadow: 1px 1px 5px 0px var(--gray);
-    position: sticky;
-    width: 100%;
-    z-index: 10000;
-    padding: 20px;
-    color: #fff;
-    width: 100%;
-
-}
-
-.foot {
+.cardNChips {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 1em;
-
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 4em;
+    justify-items: center;
 }
 
-.foot > div {
-    padding: 1em;
+
+.card {
+    height: 550px;
+    width: 700px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: 10;
+    padding: 40px;
+    color: #282626;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transition: 1s ease-out;
+
+}
+.card>i {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 2.5rem;
 }
 
-@media (max-width: 1000px) {
-    .foot {
-        grid-template-columns: repeat(2, 1fr);
-    }
+
+
+.card>div>h1 {
+    font-weight: lighter;
+    font-size: 16px;
 }
 
-@media (max-width: 768px) {
-    .foot {
+
+
+.caption .title {
+    font-size: 22px;
+}
+
+.caption .info {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+@media (max-width: 1460px) {
+    .cardNChips{
         grid-template-columns: 100%;
     }
 }
+
+@media(max-width: 800px) {
+
+    .card {
+        height: 550px;
+        width: 500px;
+        padding: 20px;
+    }
+    p {
+        font-size: 25px;
+    }
+    .container {
+        font-size: 25px;
+
+    }
+
+    .dbimg {
+        width: 15em;
+        height: 15em;
+    }
+}
+
+
+@media(max-width: 768px) {
+
+    .container p {
+        font-size: 30px;
+    }
+
+    .card {
+        height: 700px;
+        width: 350px;
+        padding: 20px;
+    }
+    p {
+        font-size: 10px;
+    }
+
+
+    .dbimg {
+        width: 10em;
+        height: 10em;
+    }
+}
+
 
 
 p, a {
@@ -111,8 +172,7 @@ p, a {
 
 
 * {
-    padding: 0px;
-    margin: 0px;
+    margin: 0;
     scroll-behavior: smooth;
     padding: 0;
     box-sizing: border-box;
@@ -128,17 +188,19 @@ ul {
 }
 
 .header {
-    background-color: var(--black);
+    /*background-color: var(--black);*/
+    background-color: rgba(3, 3, 3);
     box-shadow: 1px 1px 5px 0px var(--gray);
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 10000;
-    padding: 10px;
-    box-shadow: 0px 1px 2px rgba(157, 24, 197, 0.5),
-    0px 2px 3px rgba(157, 24, 197, 0.5),
-    0px 3px 5px rgba(157, 24, 197, 0.5),
-    0px 5px 7px rgba(157, 24, 197, 0.5);
+    padding: 15px;
+    color: black;
+    /*box-shadow: 0px 1px 2px rgba(157, 24, 197, 0.5),*/
+    /*0px 2px 3px rgba(157, 24, 197, 0.5),*/
+    /*0px 3px 5px rgba(157, 24, 197, 0.5),*/
+    /*0px 5px 7px rgba(157, 24, 197, 0.5);*/
 }
 
 .logo {
@@ -153,7 +215,8 @@ ul {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: var(--black);
+    /*background-color: var(--black);*/
+    background-color: black;
     overflow: hidden;
     left: 0;
     flex-flow: row nowrap;
@@ -172,7 +235,7 @@ ul {
 
 .menu a.active {
     /* background-color: var(--gray); Цвет фона для активной ссылки */
-    color: rgba(166, 65, 197, 0.938); /* Цвет текста для активной ссылки */
+    color: rgb(31, 33, 241); /* Цвет текста для активной ссылки */
     font-weight: bold; /* Установите жирный шрифт для активной ссылки */
 }
 
@@ -288,7 +351,7 @@ ul {
 
 .container {
     text-align: center;
-    font-family: zekton;
+    font-family: Cakra-Normal;
     margin-left: 20%;
     margin-right: 20%;
     margin-top: 3%;
@@ -322,6 +385,43 @@ p {
 }
 
 
+.footer {
+    /*background-color: #474950;*/
+    background-color: rgba(3, 3, 3);
+    box-shadow: 1px 1px 5px 0 var(--gray);
+    position: sticky;
+    width: 100%;
+    z-index: 10000;
+    padding: 20px;
+    color: #fff;
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1em;
+
+}
+
+.foot > div {
+    padding: 1em;
+}
+
+@media (max-width: 1000px) {
+    .foot {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .foot {
+        grid-template-columns: 100%;
+    }
+}
+
+
+
+
 .textborder {
     overflow-wrap: break-word;
     --b: .2em; /* border width */
@@ -332,7 +432,7 @@ p {
     border: solid var(--b) transparent;
     padding: 0.5em;
     max-width: 23em;
-    font: 2.5em zekton;
+    font: 2.5em Cakra-Normal;
 
     &::before {
         position: absolute;
@@ -340,7 +440,7 @@ p {
         inset: calc(-1 * var(--b));
         border: inherit;
         border-radius: var(--r);
-        background: linear-gradient(#252b31, rgb(140, 23, 163), #68205c) border-box;
+        background: linear-gradient(#000000, rgb(52, 52, 52), #7e7d7e) border-box;
         --corner: conic-gradient(from -90deg at var(--c) var(--c), red 25%, #0000 0) 0 0/ calc(100% - var(--c)) calc(100% - var(--c)) border-box;
         --inner: conic-gradient(red 0 0) padding-box;
         -webkit-mask: var(--corner), var(--inner);
