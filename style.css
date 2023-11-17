@@ -1,15 +1,11 @@
-/* TODO: меню у мобил. в горизонте */
-
-
-/*@font-face {*/
-/*    font-family: zekton;*/
-/*    src: url("zekton.ttf");*/
-/*}*/
-
 
 @font-face {
     font-family: Cakra-Normal;
     src: url("Cakra-Normal.otf");
+}
+
+::selection {
+    background: #b7c1ff;
 }
 
 :root {
@@ -29,6 +25,17 @@ body {
     /*background: linear-gradient(90deg, rgba(2,2,28,1) 4%, rgba(14,14,73,1) 51%, rgba(2,2,28,1) 85%);*/
     font-family: "Cakra-Normal";
 }
+
+.appear{
+    opacity: 0;
+    transition: 1s;
+}
+
+.appear.show{
+    opacity: 1;
+    transition: 1s;
+}
+
 
 .wrapper {
     display: grid;
@@ -51,7 +58,7 @@ body {
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.7);
     z-index: 10;
-    padding: 40px;
+    padding: 25px;
     color: #282626;
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
@@ -342,6 +349,18 @@ ul {
     }
 }
 
+@media (orientation: landscape) and (max-height: 550px){
+    .menu a{
+        padding: 20px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 440px){
+    .menu a{
+        padding: 10px;
+    }
+}
+
 @media (max-width: 998px) {
     .wrapper {
         grid-template-columns: 100%;
@@ -391,7 +410,7 @@ p {
     box-shadow: 1px 1px 5px 0 var(--gray);
     position: sticky;
     width: 100%;
-    z-index: 10000;
+    z-index: 9999;
     padding: 20px;
     color: #fff;
 }
