@@ -261,7 +261,7 @@ ul {
     background: white;
     display: block;
     height: 2.5px;
-    position: relative;
+    position: sticky;
     width: 24px;
 
 }
