@@ -261,7 +261,7 @@ ul {
     background: white;
     display: block;
     height: 2.5px;
-    position: sticky;
+    position: relative;
     width: 24px;
 
 }
@@ -272,7 +272,7 @@ ul {
     content: '';
     display: block;
     height: 100%;
-    position: absolute;
+    position: sticky;
     transition: all .2s ease-out; /* анимацию с плавным переходом всем свойствам при изменении */
     width: 100%;
 }
