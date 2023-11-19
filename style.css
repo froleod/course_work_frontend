@@ -246,6 +246,10 @@ ul {
     font-weight: bold; /* Установите жирный шрифт для активной ссылки */
 }
 
+.footer a{
+    color:white;
+}
+
 .nav {
     max-height: 0; /* ограничивает высоту до нуля, чтобы скрыть меню */
     transition: max-height .4s ease-out; /* анимация открытия меню */
@@ -272,7 +276,7 @@ ul {
     content: '';
     display: block;
     height: 100%;
-    position: sticky;
+    position: absolute;
     transition: all .2s ease-out; /* анимацию с плавным переходом всем свойствам при изменении */
     width: 100%;
 }
@@ -403,6 +407,75 @@ p {
     text-align: center;
 }
 
+.form{
+    display: grid;
+    justify-content: center;
+}
+
+.labels{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+#result ul {
+    font-size: 20px;
+    padding: 0;
+    list-style: none;
+    white-space: nowrap; /* Запрещаем перенос строк */
+}
+
+/* Стилизация элементов списка результатов */
+#result li {
+    margin-right: 10px;
+    display: inline-block; /* Отображение в строку */
+}
+
+#databaseForm {
+    height: 300px;
+    width: 500px;
+    margin-bottom: 20px;
+    background-color: rgba(35, 35, 35, 0.99);
+    border-radius: 20px;
+    justify-items: center;
+    color:white;
+}
+
+/* Стилизация чекбоксов */
+.filterCheckbox {
+    margin-right: 10px;
+}
+#databaseForm label {
+    display: block; /* Чтобы label занимал всю ширину контейнера */
+    margin-bottom: 0; /* Сбрасываем отступ снизу */
+    margin-left: 25%;
+    text-align: left; /* Выравнивание текста по левому краю */
+}
+
+/* Стилизация лейблов */
+#databaseForm label {
+    margin-bottom: 5px; /* Расстояние между чекбоксами и их лейблами */
+}
+
+@media (max-width: 540px) {
+    #databaseForm {
+        width: 80%; /* Примерная ширина формы при уменьшенном размере экрана */
+        font-size: 0.8em; /* Примерный уменьшенный размер шрифта для формы */
+        margin: 0 auto;
+    }
+
+    #databaseForm label {
+        margin-left: 10%; /* Примерный отступ слева для лейблов при уменьшенном размере экрана */
+    }
+
+
+    #result li {
+        margin-bottom: 7px; /* Отступ между результатами в столбце */
+        font-size: 0.55em;
+    }
+}
+
 
 .footer {
     /*background-color: #474950;*/
@@ -417,7 +490,7 @@ p {
 
 .foot {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     row-gap: 1em;
 
 }
