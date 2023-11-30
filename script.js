@@ -1,5 +1,3 @@
-// TODO: форма вылезает, меню не вылезает
-
 document.addEventListener('DOMContentLoaded', function() {
     const databases = ["PostgreSQL", "OracleBD", "MySQL", "SQLite"];
     const checkboxes = document.querySelectorAll('.filterCheckbox');
