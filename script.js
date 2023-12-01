@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const databases = ["PostgreSQL", "OracleBD", "MySQL", "SQLite"];
     const checkboxes = document.querySelectorAll('.filterCheckbox');
     const resultDiv = document.getElementById('result');
